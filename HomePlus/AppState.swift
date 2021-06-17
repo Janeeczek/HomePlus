@@ -1,9 +1,3 @@
-//
-//  AppState.swift
-//  task-tracker-swiftui
-//
-//  Created by Andrew Morgan on 05/11/2020.
-//
 
 import RealmSwift
 import SwiftUI

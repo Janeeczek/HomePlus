@@ -1,9 +1,3 @@
-//
-//  LastUpdate.swift
-//  task-tracker-swiftui
-//
-//  Created by Andrew Morgan on 16/11/2020.
-//
 
 import SwiftUI
 

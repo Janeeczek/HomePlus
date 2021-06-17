@@ -1,9 +1,3 @@
-//
-//  CheckBox.swift
-//  task-tracker-swiftui
-//
-//  Created by Andrew Morgan on 18/12/2020.
-//
 
 import SwiftUI
 

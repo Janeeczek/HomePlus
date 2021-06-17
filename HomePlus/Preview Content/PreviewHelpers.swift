@@ -1,9 +1,4 @@
-//
-//  PreviewHelpers.swift
-//  task-tracker-swiftui
-//
-//  Created by Andrew Morgan on 12/11/2020.
-//
+
 
 import SwiftUI
 
