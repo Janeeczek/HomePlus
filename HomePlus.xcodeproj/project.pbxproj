@@ -3,23 +3,75 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9F0EFC6C267BEBB600949045 /* HomePlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC6B267BEBB600949045 /* HomePlusApp.swift */; };
-		9F0EFC6E267BEBB600949045 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC6D267BEBB600949045 /* ContentView.swift */; };
 		9F0EFC70267BEBB700949045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0EFC6F267BEBB700949045 /* Assets.xcassets */; };
 		9F0EFC73267BEBB700949045 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0EFC72267BEBB700949045 /* Preview Assets.xcassets */; };
+		9F0EFC7C267BECF100949045 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 9F0EFC7B267BECF100949045 /* Realm */; };
+		9F0EFC7E267BECF100949045 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9F0EFC7D267BECF100949045 /* RealmSwift */; };
+		9F0EFC80267BED2400949045 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC7F267BED2400949045 /* AppState.swift */; };
+		9F0EFCA1267BED4600949045 /* AddDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC83267BED4600949045 /* AddDeviceView.swift */; };
+		9F0EFCA2267BED4600949045 /* ManageTeamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC84267BED4600949045 /* ManageTeamButton.swift */; };
+		9F0EFCA3267BED4600949045 /* DeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC85267BED4600949045 /* DeviceView.swift */; };
+		9F0EFCA4267BED4600949045 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC86267BED4600949045 /* GroupsView.swift */; };
+		9F0EFCA5267BED4600949045 /* UpdateDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC87267BED4600949045 /* UpdateDeviceView.swift */; };
+		9F0EFCA6267BED4600949045 /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC88267BED4600949045 /* DevicesView.swift */; };
+		9F0EFCA7267BED4600949045 /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC8A267BED4600949045 /* LogoutButton.swift */; };
+		9F0EFCA8267BED4600949045 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC8B267BED4600949045 /* LoginView.swift */; };
+		9F0EFCA9267BED4600949045 /* OpaqueProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC8D267BED4600949045 /* OpaqueProgressView.swift */; };
+		9F0EFCAA267BED4600949045 /* LabeledText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC8E267BED4600949045 /* LabeledText.swift */; };
+		9F0EFCAB267BED4600949045 /* CallToActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC8F267BED4600949045 /* CallToActionButton.swift */; };
+		9F0EFCAC267BED4600949045 /* CaptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC90267BED4600949045 /* CaptionLabel.swift */; };
+		9F0EFCAD267BED4600949045 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC91267BED4600949045 /* InputField.swift */; };
+		9F0EFCAE267BED4600949045 /* LastUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC92267BED4600949045 /* LastUpdate.swift */; };
+		9F0EFCAF267BED4600949045 /* LabeledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC93267BED4600949045 /* LabeledButton.swift */; };
+		9F0EFCB0267BED4600949045 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC94267BED4600949045 /* CheckBox.swift */; };
+		9F0EFCB1267BED4600949045 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC96267BED4600949045 /* TeamsView.swift */; };
+		9F0EFCB2267BED4600949045 /* AddTeamMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC97267BED4600949045 /* AddTeamMemberView.swift */; };
+		9F0EFCB3267BED4600949045 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC98267BED4600949045 /* ContentView.swift */; };
+		9F0EFCB7267BED4600949045 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC9E267BED4600949045 /* User.swift */; };
+		9F0EFCB8267BED4600949045 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFC9F267BED4600949045 /* Device.swift */; };
+		9F0EFCB9267BED4600949045 /* DeviceGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFCA0267BED4600949045 /* DeviceGroup.swift */; };
+		9F0EFCBE267BEF6400949045 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFCBB267BEF6400949045 /* SampleData.swift */; };
+		9F0EFCBF267BEF6400949045 /* SampleRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFCBC267BEF6400949045 /* SampleRealm.swift */; };
+		9F0EFCC0267BEF6400949045 /* PreviewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EFCBD267BEF6400949045 /* PreviewHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F0EFC68267BEBB600949045 /* HomePlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomePlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0EFC6B267BEBB600949045 /* HomePlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlusApp.swift; sourceTree = "<group>"; };
-		9F0EFC6D267BEBB600949045 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9F0EFC6F267BEBB700949045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F0EFC72267BEBB700949045 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F0EFC74267BEBB700949045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F0EFC7F267BED2400949045 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		9F0EFC83267BED4600949045 /* AddDeviceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDeviceView.swift; sourceTree = "<group>"; };
+		9F0EFC84267BED4600949045 /* ManageTeamButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTeamButton.swift; sourceTree = "<group>"; };
+		9F0EFC85267BED4600949045 /* DeviceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceView.swift; sourceTree = "<group>"; };
+		9F0EFC86267BED4600949045 /* GroupsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
+		9F0EFC87267BED4600949045 /* UpdateDeviceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateDeviceView.swift; sourceTree = "<group>"; };
+		9F0EFC88267BED4600949045 /* DevicesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
+		9F0EFC8A267BED4600949045 /* LogoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
+		9F0EFC8B267BED4600949045 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9F0EFC8D267BED4600949045 /* OpaqueProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpaqueProgressView.swift; sourceTree = "<group>"; };
+		9F0EFC8E267BED4600949045 /* LabeledText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledText.swift; sourceTree = "<group>"; };
+		9F0EFC8F267BED4600949045 /* CallToActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallToActionButton.swift; sourceTree = "<group>"; };
+		9F0EFC90267BED4600949045 /* CaptionLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptionLabel.swift; sourceTree = "<group>"; };
+		9F0EFC91267BED4600949045 /* InputField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		9F0EFC92267BED4600949045 /* LastUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastUpdate.swift; sourceTree = "<group>"; };
+		9F0EFC93267BED4600949045 /* LabeledButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledButton.swift; sourceTree = "<group>"; };
+		9F0EFC94267BED4600949045 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		9F0EFC96267BED4600949045 /* TeamsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
+		9F0EFC97267BED4600949045 /* AddTeamMemberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeamMemberView.swift; sourceTree = "<group>"; };
+		9F0EFC98267BED4600949045 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9F0EFC9E267BED4600949045 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9F0EFC9F267BED4600949045 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		9F0EFCA0267BED4600949045 /* DeviceGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceGroup.swift; sourceTree = "<group>"; };
+		9F0EFCBB267BEF6400949045 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		9F0EFCBC267BEF6400949045 /* SampleRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleRealm.swift; sourceTree = "<group>"; };
+		9F0EFCBD267BEF6400949045 /* PreviewHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F0EFC7E267BECF100949045 /* RealmSwift in Frameworks */,
+				9F0EFC7C267BECF100949045 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +106,10 @@
 		9F0EFC6A267BEBB600949045 /* HomePlus */ = {
 			isa = PBXGroup;
 			children = (
+				9F0EFC9D267BED4600949045 /* Models */,
+				9F0EFC81267BED4600949045 /* Views */,
+				9F0EFC7F267BED2400949045 /* AppState.swift */,
 				9F0EFC6B267BEBB600949045 /* HomePlusApp.swift */,
-				9F0EFC6D267BEBB600949045 /* ContentView.swift */,
 				9F0EFC6F267BEBB700949045 /* Assets.xcassets */,
 				9F0EFC74267BEBB700949045 /* Info.plist */,
 				9F0EFC71267BEBB700949045 /* Preview Content */,
@@ -64,9 +120,88 @@
 		9F0EFC71267BEBB700949045 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				9F0EFCBA267BEF6400949045 /* Model */,
+				9F0EFCBD267BEF6400949045 /* PreviewHelpers.swift */,
 				9F0EFC72267BEBB700949045 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9F0EFC81267BED4600949045 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F0EFC82267BED4600949045 /* DeviceGroups & Devices */,
+				9F0EFC89267BED4600949045 /* User Accounts */,
+				9F0EFC8C267BED4600949045 /* Components */,
+				9F0EFC95267BED4600949045 /* Teams */,
+				9F0EFC98267BED4600949045 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F0EFC82267BED4600949045 /* DeviceGroups & Devices */ = {
+			isa = PBXGroup;
+			children = (
+				9F0EFC83267BED4600949045 /* AddDeviceView.swift */,
+				9F0EFC84267BED4600949045 /* ManageTeamButton.swift */,
+				9F0EFC85267BED4600949045 /* DeviceView.swift */,
+				9F0EFC86267BED4600949045 /* GroupsView.swift */,
+				9F0EFC87267BED4600949045 /* UpdateDeviceView.swift */,
+				9F0EFC88267BED4600949045 /* DevicesView.swift */,
+			);
+			path = "DeviceGroups & Devices";
+			sourceTree = "<group>";
+		};
+		9F0EFC89267BED4600949045 /* User Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				9F0EFC8A267BED4600949045 /* LogoutButton.swift */,
+				9F0EFC8B267BED4600949045 /* LoginView.swift */,
+			);
+			path = "User Accounts";
+			sourceTree = "<group>";
+		};
+		9F0EFC8C267BED4600949045 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9F0EFC8D267BED4600949045 /* OpaqueProgressView.swift */,
+				9F0EFC8E267BED4600949045 /* LabeledText.swift */,
+				9F0EFC8F267BED4600949045 /* CallToActionButton.swift */,
+				9F0EFC90267BED4600949045 /* CaptionLabel.swift */,
+				9F0EFC91267BED4600949045 /* InputField.swift */,
+				9F0EFC92267BED4600949045 /* LastUpdate.swift */,
+				9F0EFC93267BED4600949045 /* LabeledButton.swift */,
+				9F0EFC94267BED4600949045 /* CheckBox.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9F0EFC95267BED4600949045 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				9F0EFC96267BED4600949045 /* TeamsView.swift */,
+				9F0EFC97267BED4600949045 /* AddTeamMemberView.swift */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		9F0EFC9D267BED4600949045 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F0EFC9E267BED4600949045 /* User.swift */,
+				9F0EFC9F267BED4600949045 /* Device.swift */,
+				9F0EFCA0267BED4600949045 /* DeviceGroup.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9F0EFCBA267BEF6400949045 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F0EFCBB267BEF6400949045 /* SampleData.swift */,
+				9F0EFCBC267BEF6400949045 /* SampleRealm.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +220,10 @@
 			dependencies = (
 			);
 			name = HomePlus;
+			packageProductDependencies = (
+				9F0EFC7B267BECF100949045 /* Realm */,
+				9F0EFC7D267BECF100949045 /* RealmSwift */,
+			);
 			productName = HomePlus;
 			productReference = 9F0EFC68267BEBB600949045 /* HomePlus.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +251,9 @@
 				Base,
 			);
 			mainGroup = 9F0EFC5F267BEBB600949045;
+			packageReferences = (
+				9F0EFC7A267BECF100949045 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 9F0EFC69267BEBB600949045 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +280,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F0EFC6E267BEBB600949045 /* ContentView.swift in Sources */,
+				9F0EFCB7267BED4600949045 /* User.swift in Sources */,
+				9F0EFCB2267BED4600949045 /* AddTeamMemberView.swift in Sources */,
+				9F0EFCAC267BED4600949045 /* CaptionLabel.swift in Sources */,
+				9F0EFCB8267BED4600949045 /* Device.swift in Sources */,
+				9F0EFC80267BED2400949045 /* AppState.swift in Sources */,
+				9F0EFCA7267BED4600949045 /* LogoutButton.swift in Sources */,
+				9F0EFCB1267BED4600949045 /* TeamsView.swift in Sources */,
+				9F0EFCA3267BED4600949045 /* DeviceView.swift in Sources */,
+				9F0EFCAA267BED4600949045 /* LabeledText.swift in Sources */,
+				9F0EFCBF267BEF6400949045 /* SampleRealm.swift in Sources */,
+				9F0EFCA2267BED4600949045 /* ManageTeamButton.swift in Sources */,
+				9F0EFCB0267BED4600949045 /* CheckBox.swift in Sources */,
+				9F0EFCAE267BED4600949045 /* LastUpdate.swift in Sources */,
+				9F0EFCA1267BED4600949045 /* AddDeviceView.swift in Sources */,
+				9F0EFCB3267BED4600949045 /* ContentView.swift in Sources */,
+				9F0EFCC0267BEF6400949045 /* PreviewHelpers.swift in Sources */,
+				9F0EFCA4267BED4600949045 /* GroupsView.swift in Sources */,
+				9F0EFCAB267BED4600949045 /* CallToActionButton.swift in Sources */,
+				9F0EFCAF267BED4600949045 /* LabeledButton.swift in Sources */,
+				9F0EFCA6267BED4600949045 /* DevicesView.swift in Sources */,
+				9F0EFCBE267BEF6400949045 /* SampleData.swift in Sources */,
+				9F0EFCA8267BED4600949045 /* LoginView.swift in Sources */,
 				9F0EFC6C267BEBB600949045 /* HomePlusApp.swift in Sources */,
+				9F0EFCA9267BED4600949045 /* OpaqueProgressView.swift in Sources */,
+				9F0EFCA5267BED4600949045 /* UpdateDeviceView.swift in Sources */,
+				9F0EFCB9267BED4600949045 /* DeviceGroup.swift in Sources */,
+				9F0EFCAD267BED4600949045 /* InputField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +495,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9F0EFC7A267BECF100949045 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F0EFC7B267BECF100949045 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F0EFC7A267BECF100949045 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		9F0EFC7D267BECF100949045 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F0EFC7A267BECF100949045 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9F0EFC60267BEBB600949045 /* Project object */;
 }
