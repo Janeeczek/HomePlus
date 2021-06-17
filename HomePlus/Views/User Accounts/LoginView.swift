@@ -8,33 +8,68 @@ struct LoginView: View {
     @EnvironmentObject var state: AppState
     @State private var username = ""
     @State private var password = ""
+    @State private var additional = ""
     @State private var newUser = false
 
     private enum Dimensions {
-        static let padding: CGFloat = 16.0
+        static let padding: CGFloat = 14.0
+        static let spacing: CGFloat = 44.0
     }
 
     var body: some View {
-        VStack(spacing: Dimensions.padding) {
+        VStack(spacing: Dimensions.spacing) {
+            
             Spacer()
-            InputField(title: "Email/Username",
-                       text: self.$username)
-                .keyboardType(.emailAddress)
-                .autocapitalization(.none)
-            InputField(title: "Password",
-                       text: self.$password,
-                       showingSecureField: true)
+            if newUser {
+                Text("You will be automatically logged in")
+                    .font(.callout)
+                    .bold()
+                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+            }
+            VStack(alignment: .leading) {
+                Text("Email/Username:")
+                    .font(.callout)
+                    .bold()
+                TextField("Enter username...", text: self.$username)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.emailAddress)
+                    .autocapitalization(.none)
+            }
+            if newUser {
+                VStack(alignment: .leading) {
+                    Text("Additional:")
+                        .font(.callout)
+                        .bold()
+                    TextField("Enter additional...", text: self.$additional)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .keyboardType(.emailAddress)
+                        .autocapitalization(.none)
+                }
+            }
+            VStack(alignment: .leading) {
+                Text("Password:")
+                    .font(.callout)
+                    .bold()
+                SecureField("Enter password...", text: self.$password)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .autocapitalization(.none)
+            }
+            
             CallToActionButton(
                 title: newUser ? "Register User" : "Log In",
                 action: { self.userAction(username: self.username, password: self.password) })
+            
             HStack {
                 CheckBox(title: "Register new user", isChecked: $newUser)
-                Spacer()
+                
             }
+            
+            
             Spacer()
         }
-        .navigationBarTitle("User Login", displayMode: .inline)
+        .navigationBarTitle("Home Plus", displayMode: .large)
         .padding(.horizontal, Dimensions.padding)
+        
     }
 
     private func userAction(username: String, password: String) {
@@ -105,5 +140,6 @@ struct LoginView_Previews: PreviewProvider {
                     )
             }
         )
+        .preferredColorScheme(.dark)
     }
 }
