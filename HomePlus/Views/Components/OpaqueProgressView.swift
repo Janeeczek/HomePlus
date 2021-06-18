@@ -6,7 +6,7 @@ struct OpaqueProgressView: View {
     var message: String?
 
     private enum Dimensions {
-        static let padding: CGFloat = 100
+        static let padding: CGFloat = 0
         static let bgColor = Color("Clear")
         static let cornerRadius: CGFloat = 25
     }
@@ -38,14 +38,7 @@ struct OpaquePreviewView_Previews: PreviewProvider {
         Group {
             AppearancePreviews(
                 Group {
-                    ZStack {
-                        VStack {
-                            Text("Background Text")
-                                .padding(150)
-                                .background(Color.blue)
-                        }
-                        OpaqueProgressView()
-                    }
+                    
                     ZStack {
                         VStack {
                             Text("Background Text")

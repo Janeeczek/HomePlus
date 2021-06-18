@@ -59,11 +59,15 @@ struct GroupsView_Previews: PreviewProvider {
         let state = AppState()
         state.user = .sample
 
-        return AppearancePreviews(
-            NavigationView {
-                GroupsView(isPreview: true)
-                    .environmentObject(state)
-            }
-        )
+        return Group {
+            AppearancePreviews(
+                NavigationView {
+                    GroupsView(isPreview: true)
+                        .environmentObject(state)
+                }
+            )
+            .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+            
+        }
     }
 }

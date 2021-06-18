@@ -7,8 +7,10 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
+            
             ZStack {
                 VStack {
+                    
                     if state.loggedIn {
                         GroupsView()
                     } else {
@@ -20,9 +22,15 @@ struct ContentView: View {
                             .foregroundColor(Color.red)
                     }
                 }
-                if state.shouldIndicateActivity {
-                    OpaqueProgressView("Working With Realm")
+                /*if state.shouldIndicateActivity {
+                    OpaqueProgressView("Loading")
                 }
+                 
+ */             //IconProgressView()
+                if state.shouldIndicateActivity {
+                    IconProgressView()
+                }
+                
             }
             .navigationBarItems(leading: state.loggedIn ? LogoutButton() : nil)
         }

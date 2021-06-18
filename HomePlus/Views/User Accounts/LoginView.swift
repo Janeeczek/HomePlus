@@ -4,21 +4,26 @@ import SwiftUI
 import RealmSwift
 
 struct LoginView: View {
-
+    
     @EnvironmentObject var state: AppState
     @State private var username = ""
     @State private var password = ""
     @State private var additional = ""
     @State private var newUser = false
-
+    @State private var textFieldId: String = UUID().uuidString
+    @State private var wantRegister: Bool = false
     private enum Dimensions {
         static let padding: CGFloat = 14.0
         static let spacing: CGFloat = 44.0
     }
+    
 
     var body: some View {
         VStack(spacing: Dimensions.spacing) {
-            
+            Text("Control and share your home safely")
+                .font(.headline)
+                .bold()
+                .foregroundColor(.primary)
             Spacer()
             if newUser {
                 Text("You will be automatically logged in")
@@ -34,6 +39,7 @@ struct LoginView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.emailAddress)
                     .autocapitalization(.none)
+                    .id(textFieldId)
             }
             if newUser {
                 VStack(alignment: .leading) {
@@ -44,6 +50,7 @@ struct LoginView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
+                        .id(textFieldId)
                 }
             }
             VStack(alignment: .leading) {
@@ -53,21 +60,31 @@ struct LoginView: View {
                 SecureField("Enter password...", text: self.$password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .autocapitalization(.none)
+                    .id(textFieldId)
             }
             
             CallToActionButton(
                 title: newUser ? "Register User" : "Log In",
-                action: { self.userAction(username: self.username, password: self.password) })
+                action: {
+                    textFieldId = UUID().uuidString
+                
+                    self.userAction(username: self.username, password: self.password)
+                    
+                })
             
             HStack {
-                CheckBox(title: "Register new user", isChecked: $newUser)
-                
+                //CheckBox(title: "Register new user", isChecked: $newUser)
+                Toggle("Register new user", isOn: $newUser)
             }
             
             
             Spacer()
         }
+        
+        
         .navigationBarTitle("Home Plus", displayMode: .large)
+        
+ 
         .padding(.horizontal, Dimensions.padding)
         
     }
@@ -130,16 +147,21 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        AppearancePreviews(
-            Group {
-                LoginView()
-                    .environmentObject(AppState())
-                Landscape(
+        Group {
+            AppearancePreviews(
+                Group {
                     LoginView()
                         .environmentObject(AppState())
-                    )
-            }
-        )
-        .preferredColorScheme(.dark)
+                    Landscape(
+                        LoginView()
+                            .environmentObject(AppState())
+                        )
+                }
+            )
+            .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+            
+            
+        }
+        
     }
 }

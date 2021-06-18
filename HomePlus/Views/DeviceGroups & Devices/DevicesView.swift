@@ -31,18 +31,21 @@ struct DevicesView_Previews: PreviewProvider {
     static var previews: some View {
         Realm.bootstrap()
 
-        return AppearancePreviews(
-            Group {
-                NavigationView {
-                    DevicesView(deviceGroup: .sample)
-                }
-                Landscape(
+        return Group {
+            AppearancePreviews(
+                Group {
                     NavigationView {
                         DevicesView(deviceGroup: .sample)
                     }
-                )
-            }
-        )
-        .environmentObject(AppState())
+                    Landscape(
+                        NavigationView {
+                            DevicesView(deviceGroup: .sample)
+                        }
+                    )
+                }
+            )
+            .environmentObject(AppState())
+            
+        }
     }
 }
